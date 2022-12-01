@@ -139,3 +139,36 @@ ol, ul {
     background-color: hsla(0,0%,87%,.75);
     border-radius: 10px;
 }
+
+.jobdetail-truncate {
+    --maxContentHeight: 430px;
+    max-height: var(--maxContentHeight);
+    overflow-y: hidden;
+    position: relative;
+    
+    p {
+        margin: 0;
+        font-family: var(--secondary-font);
+    }
+    ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        list-style: disc none outside;
+        font-family: var(--secondary-font);
+        li {
+            margin-left: 32px;
+            display: list-item;
+            text-align: -webkit-match-parent;
+            font-family: var(--secondary-font);
+        }
+    }
+    a {
+        position: relative;
+        display: inline-block;
+        color: var(--color-link);
+        transition: all .2s ease;
+        text-decoration: none;
+        cursor: pointer;
+        font-family: var(--secondary-font);
+    }
+}

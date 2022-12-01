@@ -47,7 +47,7 @@
                 <mat-spinner></mat-spinner>
             </div>
             <div *ngIf="!isLoading" class="jobdetail-truncate">
-                <div [innerHTML]="job?.description"></div>
+                <div [innerHTML]="description"></div>
             </div>
             <div *ngIf="!isLoading" class="jobdetail-readmore">
                 <button data-testid="customLinkButton" mat-button color="primary">

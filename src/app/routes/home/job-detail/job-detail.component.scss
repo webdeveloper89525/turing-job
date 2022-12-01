@@ -68,6 +68,18 @@
             max-height: var(--maxContentHeight);
             overflow-y: hidden;
             position: relative;
+            p {
+                margin: 0;
+            }
+            ::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 120px 0;
+                background-image: linear-gradient(180deg,transparent 60%,#fff);
+            }
         }
 
         .jobdetail-readmore {
