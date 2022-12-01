@@ -5,6 +5,8 @@ import { catchError, retry } from 'rxjs/operators';
 import { IJob } from '../model/job.model';
 
 export const PAGE_SIZE = 10;
+const API_URL = 'https://www.turing.com/api/remote-jobs'
+
 @Injectable({
   providedIn: 'root',
 })
@@ -26,23 +28,23 @@ export class JobService {
       offset?: number,
       skillIds?: string,
     }>{
-      'sortBy': 'publishedOnJobBoard,desc',
-      'limit': 30,
-      "locale": "en",
+      sortBy: 'publishedOnJobBoard,desc',
+      limit: PAGE_SIZE,
+      locale: "en",
     };
 
     const {offset, skillIds} = param || {};
 
     if (offset) {
-      params["offset"] = offset;
+      params.offset = offset;
     }
 
     if (skillIds && skillIds.length > 0) {
-        params["skillIds"] = skillIds.join(",")
+        params.skillIds = skillIds.join(",")
     }
 
     return this.http
-      .get<IJob[]>('https://www.turing.com/api/remote-jobs', { ...this.httpOptions, params })
+      .get<IJob[]>(API_URL, { ...this.httpOptions, params })
       .pipe(retry(1), catchError(this.handleError));
   }
 
@@ -52,7 +54,7 @@ export class JobService {
     }
 
     return this.http
-      .get<IJob>('https://www.turing.com/api/remote-jobs/description', { ...this.httpOptions, params })
+      .get<IJob>(API_URL + '/description', { ...this.httpOptions, params })
       .pipe(retry(1), catchError(this.handleError));
   }
 
@@ -60,10 +62,8 @@ export class JobService {
   handleError(error: any) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
-      // Get client-side error
       errorMessage = error.error.message;
     } else {
-      // Get server-side error
       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
     }
     return throwError(() => {
