@@ -1,62 +1,60 @@
-<div class="liveJobsSection_jobDetailSection">
-    <div class="liveJobDetail_container">
-      <div>
-        <div class="liveJobDetail_header">
-          <div class="liveJobDetail_jobTitle">{{ selectedJob?.publicTitle }}</div>
-          <div class="liveJobDetail_companyDetailsWrapper">
-            <div class="CompanyBasicInfo_companyDetails CompanyBasicInfo_size-sm">
-              <div class="CompanyBasicInfo_item">
-                <mat-icon class="CompanyBasicInfo_icon">business</mat-icon>
-                <div>Industry: Artificial Intelligence</div>
-              </div>
-              <div class="CompanyBasicInfo_item">
-                <mat-icon class="CompanyBasicInfo_icon">place</mat-icon>
-                <div>Remote</div>
-              </div>
-              <div class="CompanyBasicInfo_item">
-                <mat-icon class="CompanyBasicInfo_icon">group</mat-icon>
-                <div>Company size: 51-250</div>
-              </div>
-              <div class="CompanyBasicInfo_item">
-                <mat-icon class="CompanyBasicInfo_icon">event</mat-icon>
-                <div>Full-time</div>
-              </div>
-              <div class="CompanyBasicInfo_item">
-                <mat-icon class="CompanyBasicInfo_icon">money</mat-icon>
-                <div>Not disclosed</div>
-              </div>
+<div class="jobdetail-container">
+    <div>
+        <div class="jobdetail-header">
+            <div class="jobdetail-title">{{ selectedJob?.publicTitle }}</div>
+            <div class="jobdetail-detail">
+                <div class="jobdetail-company">
+                <div class="company-item">
+                    <mat-icon class="company-icon">business</mat-icon>
+                    <div>Industry: {{selectedJob?.industry}}</div>
+                </div>
+                <div class="company-item">
+                    <mat-icon class="company-icon">place</mat-icon>
+                    <div>Remote</div>
+                </div>
+                <div class="company-item">
+                    <mat-icon class="company-icon">group</mat-icon>
+                    <div>Company size: {{selectedJob?.companySize | companySize}}</div>
+                </div>
+                <div class="company-item">
+                    <mat-icon class="company-icon">event</mat-icon>
+                    <div>Full-time</div>
+                </div>
+                <div class="company-item">
+                    <mat-icon class="company-icon">money</mat-icon>
+                    <div>Not disclosed</div>
+                </div>
+                </div>
+                <div class="jobdetail-cta">
+                <button
+                    mat-raised-button
+                    color="primary"
+                    href="https://developers.turing.com"
+                >
+                    Apply now
+                </button>
+                </div>
             </div>
-            <div class="liveJobDetail_cta">
-              <button
-                mat-raised-button
-                color="primary"
-                href="https://developers.turing.com"
-              >
-                Apply now
-              </button>
+            <ul class="jobdetail-skills">
+                <li *ngFor="let skill of job?.requiredSkills || []">
+                    <div class="jobdetail-skillpill">{{ skill.name }}</div>
+                </li>
+            </ul>
+        </div>
+        <div class="jobdetail-content">
+            <p><strong>Job description</strong></p>
+            <div *ngIf="isLoading" class="loading">
+                <mat-spinner></mat-spinner>
             </div>
-          </div>
-          <ul class="liveJobDetail_skillsList">
-            <li *ngFor="let skill of job?.requiredSkills || []">
-              <div class="liveJobDetail_skillPill">{{ skill.name }}</div>
-            </li>
-          </ul>
+            <div *ngIf="!isLoading" class="jobdetail-truncate">
+                <div [innerHTML]="job?.description"></div>
+            </div>
+            <div *ngIf="!isLoading" class="jobdetail-readmore">
+                <button data-testid="customLinkButton" mat-button color="primary">
+                View full job description
+                </button>
+            </div>
         </div>
-        <div class="liveJobDetail_jobContent">
-          <p><strong>Job description</strong></p>
-          <div *ngIf="isLoading" class="loading">
-              <mat-spinner></mat-spinner>
-          </div>
-          <div *ngIf="!isLoading" class="Truncate_truncate">
-            <div [innerHTML]="job?.description"></div>
-          </div>
-          <div *ngIf="!isLoading" class="liveJobDetail_readMore">
-            <button data-testid="customLinkButton" mat-button color="primary">
-              View full job description
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-  
+</div>
+    

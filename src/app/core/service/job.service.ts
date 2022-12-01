@@ -4,7 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { IJob } from '../model/job.model';
 
-export const PAGE_SIZE = 30;
+export const PAGE_SIZE = 10;
 @Injectable({
   providedIn: 'root',
 })

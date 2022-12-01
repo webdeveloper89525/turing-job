@@ -1,16 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+// @import url('https://fonts.cdnfonts.com/css/gordita');
+@import './assets/fonts/gordita/stylesheet.css';
 
-html, body { 
-    height: 100%;
-    font-size: 12px;
-}
-
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-ol, ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+html {
+    font-size: 10px;
+    scroll-padding-top: 75px;
 }
 
 :root {
@@ -45,6 +39,7 @@ ol, ul {
     --shadow-box: rgba(17,17,26,.05) 0px 1px 0px,rgba(17,17,26,.1) 0px 0px 8px;
     --gradient-purple-to-blue: linear-gradient(90deg,#6c7bd4,#56a8f7);
     --primary-font: Gordita,sans-serif;
+    --secondary-font: Gordita-Regular,sans-serif;
     --fz-paragraph: 16px;
     --fz-paragraph-xs: 12px;
     --fz-paragraph-sm: 14px;
@@ -84,9 +79,63 @@ ol, ul {
     --gutter: 32px
 }
 
+body { 
+    height: 100%;
+    font: var(--fz-paragraph)/var(--lh-paragraph) var(--primary-font);
+    color: var(--color-text,#000);
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+
+ol, ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading,#000);
+    font-weight: 500;
+    line-height: inherit;
+    margin: 0 0 0.5em;
+}
+
+.section {
+    background-color: var(--color-gray-extra-light);
+    padding: 4rem 0;
+}
+
+
+@media (min-width: 1025px) {
+    .section {
+        padding: 8rem 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .section {
+        padding: 5.6rem 0;
+    }
+}
+
 .container {
-    width: 100%;
-    max-width: calc(var(--container-width) + var(--gutter)*2);
+    max-width: calc(var(--container-width) + var(--gutter) * 2);
     padding: 0 var(--gutter);
     margin: 0 auto;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #aaa;
+}
+::-webkit-scrollbar-track {
+    background-color: hsla(0,0%,87%,.75);
+    border-radius: 10px;
 }

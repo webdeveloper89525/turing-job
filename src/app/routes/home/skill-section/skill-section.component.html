@@ -1,8 +1,9 @@
-<mat-chip-listbox aria-label="skill selection" class="skill-set">
-    <mat-chip *ngFor="let skill of skills; let idx = index" class="skill-item" (click)="onToggle(idx)" [ngClass]="{selected: skill.selected}" highlighted={{!!skill.selected}}>
-        {{skill.name}}
-        <button matChipRemove [attr.aria-label]="'remove ' + skill.name" *ngIf="skill.selected" (click)="onToggle(idx)">
-            <mat-icon>close</mat-icon>
-        </button>
-    </mat-chip>
-</mat-chip-listbox>
+<div class="skill-container">
+    <ul class="skill-group">
+        <li *ngFor="let skill of skills; let idx = index" class="skill-item" (click)="onToggle(idx)">
+            <button class="item-btn" [ngClass]="{selected: skill.selected}">
+                {{skill.name}}
+            </button>
+        </li>
+    </ul>
+</div>

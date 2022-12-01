@@ -36,6 +36,7 @@ export class JobDetailComponent implements OnInit, OnChanges {
       this.isLoading = true;
       this.jobApi.getJob(jobId).subscribe((data: IJob) => {
         this.job = data;
+        console.log('this.job: ', this.job);
         this.isLoading = false;
       });
     }

@@ -1,7 +1,7 @@
-<div class="liveJobsSection_jobSection">
-    <div class="liveJobsSection_jobCardsSection">
+<div class="job-panel">
+    <div class="job-list">
         <div
-            class="liveJobsSection_jobCardsSection-container"
+            class="job-list-container"
             infinite-scroll
             [infiniteScrollDistance]="0"
             [infiniteScrollThrottle]="300"
@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-    <div class="liveJobsSection_jobDetailSection">
+    <div class="job-detail">
         <app-job-detail [selectedJob]="selectedJob"></app-job-detail>
     </div>
 </div>

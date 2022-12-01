@@ -1,56 +1,52 @@
-.liveJobsSection_jobDetailSection {
-    display: inline;
-    display: initial;
-    flex-basis: 70%;
-    background-color: #fff;
-    box-shadow: 0 0 10px 0 rgb(0 0 0 / 9%);
-}
-
-.liveJobDetail_container {
+.jobdetail-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    box-shadow: 0 0 10px 0 rgb(0 0 0 / 9%);
 
-    .liveJobDetail_header {
+    p {
+        margin: 0;
+    }
+
+    .jobdetail-header {
         padding: 32px;
         border-bottom: 1px solid #eee;
 
-        .liveJobDetail_jobTitle {
+        .jobdetail-title {
             font-size: 2rem;
             font-weight: 500;
             color: #212121;
         }
 
-        .liveJobDetail_companyDetailsWrapper {
+        .jobdetail-detail {
             margin-top: 16px;
             display: grid;
             grid-template-columns: 2.5fr 1fr;
         }
 
-        .liveJobDetail_cta {
+        .jobdetail-cta {
             justify-self: flex-end;
         }
 
-        .liveJobDetail_skillsList {
+        .jobdetail-skills {
             margin-top: 16px;
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
 
-            .liveJobDetail_skillPill {
+            .jobdetail-skillpill {
                 border: 1px solid #ccc;
                 border-radius: 4px;
                 padding: 4px 8px;
                 line-height: 1.2;
                 font-size: 1.2rem;
                 color: #444;
+                font: var(--fz-paragraph-xs)/var(--lh-paragraph) var(--secondary-font);
             }
         }
     }
 
-    .liveJobDetail_jobContent {
+    .jobdetail-content {
         padding: 32px 70px 40px 32px;
         min-height: 20rem;
         line-height: 2;
@@ -58,16 +54,30 @@
 
         p {
             margin: 0;
+            strong {
+                color: #212121;
+                font-size: 1.6rem;
+                font-weight: 500;
+                margin-top: 0;
+                display: inline-block;
+            }
         }
         
-        .liveJobDetail_readMore {
+        .jobdetail-truncate {
+            --maxContentHeight: 430px;
+            max-height: var(--maxContentHeight);
+            overflow-y: hidden;
+            position: relative;
+        }
+
+        .jobdetail-readmore {
             margin-top: 10px;
             text-align: center;
         }
     }
 }
 
-.CompanyBasicInfo_companyDetails {
+.jobdetail-company {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2,1fr);
@@ -75,11 +85,12 @@
     gap: 14px;
     color: #666;
 
-    .CompanyBasicInfo_item {
+    .company-item {
         display: flex;
         align-items: center;
+        font: var(--fz-paragraph-xs)/var(--lh-paragraph) var(--secondary-font);
 
-        .CompanyBasicInfo_icon {
+        .company-icon {
             margin-right: 8px;
             font-size: 1.8rem;
             width: 18px;
