@@ -1,0 +1,33 @@
+.liveJobsSection_jobSection {
+    margin-top: 56px;
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    position: relative;
+    height: 100%;
+
+    .liveJobsSection_jobCardsSection {
+        box-shadow: 0 0 10px 0 rgb(0 0 0 / 9%);
+        flex-basis: 100%;
+        
+        @media (min-width: 1024px) {            
+            flex-basis: 30%;
+        }
+
+    }
+    
+    .liveJobsSection_jobCardsSection-container {
+        height: 100%;
+        max-height: 1340px;
+        overflow-y: auto;
+    }
+    
+    .liveJobsSection_jobDetailSection {
+        display: inline;
+        display: initial;
+        flex-basis: 70%;
+        background-color: #fff;
+        box-shadow: 0 0 10px 0 rgb(0 0 0 / 9%);
+    }
+}
+

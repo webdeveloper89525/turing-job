@@ -1,0 +1,22 @@
+.skill-item {
+    ::ng-deep {
+        .mdc-evolution-chip__text-label.mat-mdc-chip-action-label {
+            cursor: pointer;
+        }
+    } 
+
+    &.selected {
+        background-color: #666;
+        box-shadow: 0 1px 4px 0 rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px -1px rgb(0 0 0 / 20%);
+
+        ::ng-deep {
+            .mdc-evolution-chip__text-label.mat-mdc-chip-action-label {
+                color: #fff;
+            }
+        } 
+    }
+
+    &:hover {
+        box-shadow: 0 1px 4px 0 rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px -1px rgb(0 0 0 / 5%);
+    }
+}

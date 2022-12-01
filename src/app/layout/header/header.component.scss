@@ -1,0 +1,14 @@
+.header {
+    padding: 0;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover, a:active{
+    color: lightgray;
+}

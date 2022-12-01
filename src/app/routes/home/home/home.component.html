@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div class="container">
+    <h2 class="liveJobsSection_heading">Technologies</h2>
+    <app-skill-section [skills]="skills" (toggleSelection)="toggleSelection($event)"></app-skill-section>
+    <div class="loading" *ngIf="isInitLoading">
+        <mat-spinner></mat-spinner>
+    </div>
+    <app-job-section [jobs]="jobs" [selectedJob]="selectedJob" (onLoadMore)="loadJobs()" (onSelectJob)="handleSelectJob($event)" *ngIf="!isInitLoading"></app-job-section>
+</div>

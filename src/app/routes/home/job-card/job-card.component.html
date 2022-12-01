@@ -1,0 +1,22 @@
+<div class="liveJobCardList_listItem" (click)="handleClick()" [ngClass]="{selected}">
+    <div role="presentation" class="liveJobCard_container">
+        <div class="liveJobCard_title">{{job.publicTitle}}</div>
+        <div class="liveJobCard_description">
+            <div class="liveJobCard_descriptionItem">
+                <mat-icon class="liveJobCard_icon">business</mat-icon>
+                <span>{{job.industry}}</span>
+            </div>
+            <div class="liveJobCard_descriptionItem">
+                <mat-icon class="liveJobCard_icon">group</mat-icon>
+                <span>{{job.companySize | companySize}}</span>
+            </div>
+            <div class="liveJobCard_descriptionItem">{{job.publishedOnJobBoard | dateAgo}}</div>
+        </div>
+        <div class="liveJobCard_topSkills">
+            <ul class="liveJobCard_topSkillsList">
+                <li><div class="liveJobCard_topSkillsListItem">Node.js</div></li>
+                <li><div class="liveJobCard_topSkillsListItem">DevOps</div></li>
+            </ul>
+        </div>
+    </div>
+</div>

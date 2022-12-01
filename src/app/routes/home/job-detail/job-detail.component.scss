@@ -1,0 +1,96 @@
+.liveJobsSection_jobDetailSection {
+    display: inline;
+    display: initial;
+    flex-basis: 70%;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 9%);
+}
+
+.liveJobDetail_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 9%);
+
+    .liveJobDetail_header {
+        padding: 32px;
+        border-bottom: 1px solid #eee;
+
+        .liveJobDetail_jobTitle {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #212121;
+        }
+
+        .liveJobDetail_companyDetailsWrapper {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+        }
+
+        .liveJobDetail_cta {
+            justify-self: flex-end;
+        }
+
+        .liveJobDetail_skillsList {
+            margin-top: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            .liveJobDetail_skillPill {
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 4px 8px;
+                line-height: 1.2;
+                font-size: 1.2rem;
+                color: #444;
+            }
+        }
+    }
+
+    .liveJobDetail_jobContent {
+        padding: 32px 70px 40px 32px;
+        min-height: 20rem;
+        line-height: 2;
+        list-style: none;
+
+        p {
+            margin: 0;
+        }
+        
+        .liveJobDetail_readMore {
+            margin-top: 10px;
+            text-align: center;
+        }
+    }
+}
+
+.CompanyBasicInfo_companyDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 14px;
+    gap: 14px;
+    color: #666;
+
+    .CompanyBasicInfo_item {
+        display: flex;
+        align-items: center;
+
+        .CompanyBasicInfo_icon {
+            margin-right: 8px;
+            font-size: 1.8rem;
+            width: 18px;
+            height: auto;
+        }
+    }
+}
+
+.loading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
