@@ -26,13 +26,9 @@
                 </div>
                 </div>
                 <div class="jobdetail-cta">
-                <button
-                    mat-raised-button
-                    color="primary"
-                    href="https://developers.turing.com"
-                >
+                <a class="apply-btn" href="#">
                     Apply now
-                </button>
+                </a>
                 </div>
             </div>
             <ul class="jobdetail-skills">
@@ -50,11 +46,76 @@
                 <div [innerHTML]="description"></div>
             </div>
             <div *ngIf="!isLoading" class="jobdetail-readmore">
-                <button data-testid="customLinkButton" mat-button color="primary">
-                View full job description
-                </button>
+                <a class="readmore-btn" href="#">View full job description</a>
             </div>
         </div>
     </div>
+    <section class="section-frame">
+        <div class="section-container">
+            <div class="section-headline">
+                <div class="section-headcol">
+                    <h2 class="section-title">
+                        How to become a Turing developer?
+                    </h2>
+                    <div class="section-brief">Work with the best software companies in just 4 easy steps</div>
+                </div>
+            </div>
+            <ol class="processbox-list">
+                <li class="list-item">
+                    <div class="box-item">
+                        <span class="box-index"></span>
+                        <div class="box-text">
+                            <h3 class="box-title">
+                                <span class="box-index"></span>
+                                Create your profile
+                            </h3>
+                            <p>Fill in your basic details - Name, location, skills, salary, &amp; experience.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="box-item">
+                        <span class="box-index"></span>
+                        <div class="box-text">
+                            <h3 class="box-title">
+                                <span class="box-index"></span>
+                                Take our tests and interviews
+                            </h3>
+                            <p>Solve questions and appear for technical interview.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="box-item">
+                        <span class="box-index"></span>
+                        <div class="box-text">
+                            <h3 class="box-title">
+                                <span class="box-index"></span>
+                                Receive job offers
+                            </h3>
+                            <p>Get matched with the best US and Silicon Valley companies.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-item">
+                    <div class="box-item">
+                        <span class="box-index"></span>
+                        <div class="box-text">
+                            <h3 class="box-title">
+                                <span class="box-index"></span>
+                                Start working on your dream job
+                            </h3>
+                            <p>Once you join Turing, you’ll never have to apply for another job.</p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+            <div class="section-box">
+                <a class="apply-btn" href="#">
+                    Apply now
+                </a>
+            </div>
+        </div>
+    </section>
 </div>
     

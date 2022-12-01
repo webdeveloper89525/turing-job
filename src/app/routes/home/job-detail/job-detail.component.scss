@@ -1,3 +1,4 @@
+
 .jobdetail-container {
     display: flex;
     flex-direction: column;
@@ -85,6 +86,38 @@
         .jobdetail-readmore {
             margin-top: 10px;
             text-align: center;
+
+            .readmore-btn {
+                
+
+                font-size: var(--btn-fz);
+                position: relative;
+                font-weight: 500;
+                color: var(--color-blue);
+                letter-spacing: .04em;
+                text-decoration: none;
+                outline: none;
+                background: none;
+                border: none;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 1px;
+                    width: 0;
+                    background-color: var(--btn-bg-color);
+                    transition: width .2s ease;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }
@@ -117,3 +150,123 @@
     justify-content: center;
     padding: 24px;
 }
+
+.apply-btn {
+    font-size: var(--btn-fz);
+    border-radius: var(--btn-radius);
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: var(--btn-color);
+    background-color: var(--btn-bg-color);
+    padding: var(--btn-x) var(--btn-y);
+    border: 1px solid var(--btn-bg-color);
+    letter-spacing: var(--btn-ls);
+    font-weight: 500;
+    transition: all .2s ease-in-out;
+    line-height: 16px;
+
+    &:hover {
+        background-color: var(--btn-bg-color-hover);
+        border-color: var(--btn-bg-color-hover);
+    }
+}
+
+.section-frame {
+    padding: 2.8rem 0;
+    .section-container {
+        width: 100%;
+        max-width: calc(var(--container-width) + var(--gutter)*2);
+        padding: 0 var(--gutter);
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    .section-headline {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 48px;
+    }
+    .section-headcol {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+    .section-title {
+        justify-content: center;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1.2rem 0.8rem;
+        flex-wrap: wrap;
+        color: var(--color-black);
+        font-size: var(--fz-h2);
+    }
+    .section-brief {
+        font-family: var(--secondary-font);
+    }
+    .processbox-list {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        counter-reset: counter;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin: -20px;
+
+        .list-item {
+            counter-increment: counter;
+            flex: 0 0 266px;
+            padding: 20px;
+        }
+        .box-item {
+            font-size: var(--fz-paragraph-sm);
+            line-height: 1.57;
+            text-align: left;
+        }
+        .box-index {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: var(--color-text);
+            color: var(--color-white);
+            font-size: var(--fz-paragraph);
+            line-height: 1;
+            margin-bottom: 6px;
+            &::before {
+                content: counter(counter);
+            }
+        }
+        .box-text {
+            .box-title {
+                font-size: 1.6rem;
+                margin-bottom: 0.1em;
+                .box-index {
+                    display: none;
+                }
+            }
+            p {
+                font-family: var(--secondary-font);
+            }
+        }
+        
+    }
+    .section-box {
+        display: flex;
+        justify-content: center;
+        .apply-btn {
+            margin-top: 4rem;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .section-frame {
+        padding: 3.2rem 0;
+    }   
+}
+

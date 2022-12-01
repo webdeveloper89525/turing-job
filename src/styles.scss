@@ -67,6 +67,10 @@ html {
     --btn-color-white: var(--color-white);
     --btn-bg-color-transparent: transparent;
     --btn-color-transparent: var(--color-white);
+    --btn-color: var(--btn-color-primary);
+    --btn-bg-color: var(--btn-bg-color-primary);
+    --btn-color-hover: var(--btn-color-primary)-hover;
+    --btn-bg-color-hover: var(--btn-bg-color-primary-hover);
     --btn-radius: 4px;
     --container-width: 1208px;
     --card-radius: 8px;
