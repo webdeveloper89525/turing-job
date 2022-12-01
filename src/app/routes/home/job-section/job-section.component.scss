@@ -33,5 +33,30 @@
             box-shadow: 0 0 10px 0 rgb(0 0 0 / 9%);
         }
     }
+
+    
 }
 
+.job-more {
+    background-color: rgba(46,110,223,.078);
+    border-radius: 4px;
+    padding: 24px;
+    margin-top: 32px;
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+    .job-more-title {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #2e6edf;
+        margin-bottom: 10px;
+    }
+    .job-more-detail {
+        font-size: 1.4rem;
+        color: #444;
+        margin-bottom: 24px;
+        font-family: var(--secondary-font);
+    }
+    
+}

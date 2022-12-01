@@ -151,28 +151,6 @@
     padding: 24px;
 }
 
-.apply-btn {
-    font-size: var(--btn-fz);
-    border-radius: var(--btn-radius);
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    color: var(--btn-color);
-    background-color: var(--btn-bg-color);
-    padding: var(--btn-x) var(--btn-y);
-    border: 1px solid var(--btn-bg-color);
-    letter-spacing: var(--btn-ls);
-    font-weight: 500;
-    transition: all .2s ease-in-out;
-    line-height: 16px;
-
-    &:hover {
-        background-color: var(--btn-bg-color-hover);
-        border-color: var(--btn-bg-color-hover);
-    }
-}
-
 .section-frame {
     padding: 2.8rem 0;
     .section-container {
